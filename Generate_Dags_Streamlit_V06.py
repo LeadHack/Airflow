@@ -11,7 +11,7 @@ from Dag_Template import generate_dag_Purge  # Importer la fonction
 dag_directory = "C:\\Users\\mchakir\\Desktop\\Demandes Differs\\AIRFLOW\\Airflow_Automatisation\\Mes_Scripts\\Mes_Dags"  # Modifiez ce chemin selon votre configuration
 
 # Charger le CSS depuis le fichier externe
-with open("style.css") as f:
+with open("Style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Titre de l'application
