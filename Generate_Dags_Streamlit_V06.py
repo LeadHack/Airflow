@@ -15,7 +15,7 @@ with open("Style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Titre de l'application
-st.markdown('<div class="title">Générer Vos Dags Automatiquement</div>', unsafe_allow_html=True)
+st.markdown('<div class="title">Générer Vos Dags Airflow Automatiquement</div>', unsafe_allow_html=True)
 
 # Menu de choix initial
 menu_choice = st.selectbox(
