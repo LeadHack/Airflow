@@ -20,7 +20,7 @@ st.markdown('<div class="title">Générer Vos Dags Airflow Automatiquement</div>
 # Menu de choix initial
 menu_choice = st.selectbox(
     "Choisissez le type de DAG à créer",
-    ("Dags PLI (ex: Apache, MariaDB, SQLSERVER)", "Dags Purge")
+    ("Dags PLI (ex: Apache, MariaDB)", "Dags Purge")
 )
 
 if menu_choice == "Dags PLI (ex: Apache, MariaDB)":
