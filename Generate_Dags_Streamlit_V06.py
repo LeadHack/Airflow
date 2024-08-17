@@ -36,6 +36,7 @@ if menu_choice == "Dags PLI (ex: Apache, MariaDB)":
     start_date = st.date_input("Date de début", value=None)
     retries = st.number_input("Nombre de tentatives", min_value=0, max_value=10, value=1)
     selected_schedule = st.selectbox("Choisissez un calendrier", list(schedule_options_Hebdo.keys()))
+    Basicat = st.text_input("Basicat", value=None)
 
     if selected_schedule == 'Personnalisé':
         schedule_interval = st.text_input("Intervalle de planification (expression cron)", "0 0 * * *")
@@ -58,7 +59,8 @@ if menu_choice == "Dags PLI (ex: Apache, MariaDB)":
                 actual_service_name = services[service]                
                 # Utilisation de la fonction pour générer le code du DAG
                 dag_code = generate_dag_code_PLI(service, actual_service_name, start_date, retries, schedule_interval)
-                dag_file_path = os.path.join(dag_directory, f"{service.lower()}_service_control.py")         
+                #dag_file_path = os.path.join(dag_directory, f"{service.lower()}_service_control.py")  
+                dag_file_path = os.path.join(dag_directory, f"D.{Basicat}.ARR_DEM.{service.lower()}.py")                   
                 
                 with open(dag_file_path, 'w') as dag_file:
                     dag_file.write(dag_code)
